@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Products</h1>
+  <h1 class="text-center p-3">Our specialties</h1>
   <div class="container">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
       @for(product of products; track $index){
@@ -12,8 +12,14 @@
             <hr />
             <p class="card-text">Price: € {{ product.price }}</p>
             <hr />
-            <a class="btn btn-primary" [routerLink]="['/details', product.id]">Details</a>
-            <button class="btn btn-success mx-3" (click)="addToCart(product)">Order</button>
+            @if(product.availability == true){
+            <div>
+              <a class="btn btn-primary" [routerLink]="['/details', product.id]">Details</a>
+              <button class="btn btn-success mx-3" (click)="addToCart(product)">Order</button>
+            </div>
+            }@else{
+            <div class="text-danger p-2">This product is not available.</div>
+            }
           </div>
         </div>
       </div>

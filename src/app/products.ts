@@ -8,7 +8,7 @@ export const PRODUCTS: IProduct[] = [
     description: 'Classic Italian pizza with fresh mozzarella, tomatoes, and basil.',
     imageUrl: 'pizza-margherita.jpg',
     availability: true,
-    quantity: 0,
+    quantity: 1,
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const PRODUCTS: IProduct[] = [
     description: 'A delicious pizza topped with spicy pepperoni and mozzarella cheese.',
     imageUrl: 'pizza-pepperoni.jpg',
     availability: true,
-    quantity: 0,
+    quantity: 1,
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ export const PRODUCTS: IProduct[] = [
     description: 'A sweet and savory blend of vegan ham, pineapple, and melted cheese.',
     imageUrl: 'pizza-hawaiian.jpg',
     availability: true,
-    quantity: 0,
+    quantity: 1,
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ export const PRODUCTS: IProduct[] = [
       'Loaded with bell peppers, onions, black and green olives, mushrooms, and tomatoes.',
     imageUrl: 'pizza-veggie-delight.jpg',
     availability: true,
-    quantity: 0,
+    quantity: 1,
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ export const PRODUCTS: IProduct[] = [
     description: 'A rich mix of mozzarella, gorgonzola, parmesan, and provolone cheeses.',
     imageUrl: 'pizza-four-cheese.jpg',
     availability: true,
-    quantity: 0,
+    quantity: 1,
   },
   {
     id: 7,
@@ -63,7 +63,7 @@ export const PRODUCTS: IProduct[] = [
     description: 'Topped with vegan pepperoni, sausage, bacon, ham and a lot of veggies.',
     imageUrl: 'pizza-meat-lovers.jpg',
     availability: true,
-    quantity: 0,
+    quantity: 1,
   },
   {
     id: 8,
@@ -72,7 +72,7 @@ export const PRODUCTS: IProduct[] = [
     description: 'Gourmet pizza with truffle oil, wild mushrooms, and creamy mozzarella.',
     imageUrl: 'pizza-truffle-mushroom.jpg',
     availability: true,
-    quantity: 0,
+    quantity: 1,
   },
   {
     id: 9,
@@ -81,6 +81,6 @@ export const PRODUCTS: IProduct[] = [
     description: 'Spicy buffalo sauce with vegan grilled chicken, onions, and vegan blue cheese.',
     imageUrl: 'pizza-buffalo-vegan-chicken.jpg',
     availability: true,
-    quantity: 0,
+    quantity: 1,
   },
 ];
