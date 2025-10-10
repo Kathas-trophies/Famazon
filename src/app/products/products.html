@@ -1,1 +1,23 @@
-<p>products works!</p>
+<div class="container">
+  <h1>Products</h1>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+      @for(product of products; track $index){
+      <div class="col">
+        <div class="card my-3">
+          <img [src]="'/img/' + product.imageUrl" class="card-img-top" alt="{{ product.name }}" />
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <hr />
+            <p class="card-text">Price: € {{ product.price }}</p>
+            <hr />
+            <a class="btn btn-primary" [routerLink]="['/details', product.id]">Details</a>
+            <button class="btn btn-success mx-3" (click)="addToCart(product)">Order</button>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

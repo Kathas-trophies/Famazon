@@ -1,1 +1,18 @@
-<p>details works!</p>
+<div class="container">
+  @if(product){
+  <div class="row my-5">
+    <div class="col">
+      <img [src]="'/img/' + product.imageUrl" class="img-fluid w-100" alt="{{ product.name }}" />
+    </div>
+    <div class="col">
+      <h1>{{ product.name }}</h1>
+      <p>{{ product.description }}</p>
+      <p>Price: €{{ product.price }}</p>
+      <button class="btn btn-success mx-3" (click)="addToCart(product)">Add to Cart</button>
+    </div>
+  </div>
+
+  } @else{
+  <h2>Product Not Available</h2>
+  }
+</div>
