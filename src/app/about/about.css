@@ -1,0 +1,6 @@
+img {
+  display: block;
+  overflow: hidden;
+  width: auto;
+  max-width: 70%;
+}

@@ -21,6 +21,6 @@ export class ProductDetails implements OnInit {
   }
   addToCart(product: IProduct): void {
     this.cartService.addToCart(product);
-    alert(`product.name has been added to the cart`);
+    alert(`${product.name} has been added to the cart`);
   }
 }
