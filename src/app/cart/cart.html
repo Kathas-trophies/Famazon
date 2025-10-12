@@ -27,6 +27,33 @@
     <div class="text-end">
       <h4>Total: € {{ total }}</h4>
     </div>
+    <div class="container mt-4">
+      <h3>Order form</h3>
+      <p>Please fill up your information for delivery</p>
+      <form [formGroup]="userform">
+        <label class="form-label">First name</label>
+        <input type="text" class="form-control" formControlName="firstName" />
+        @if(userform.get('firstName')?.hasError('required') && userform.get("firstName")?.touched ||
+        formSubmitted){
+        <p class="text-danger">First Name is required</p>
+
+        }
+        <label class="form-label">Last name</label>
+        <input type="text" class="form-control" formControlName="lastName" />
+        @if(userform.get('lastName')?.hasError('required') && userform.get("lastName")?.touched ||
+        formSubmitted){
+        <p class="text-danger">Last Name is required</p>
+        }
+
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" formControlName="email" />
+        @if(userform.get('email')?.hasError('required') && userform.get("email")?.touched ||
+        formSubmitted){
+        <p class="text-danger">Email is required</p>
+        }
+        <button type="submit" class="btn btn-primary my-3">Send Order</button>
+      </form>
+    </div>
   </div>
   }@else{
   <p>Your cart is empty!</p>

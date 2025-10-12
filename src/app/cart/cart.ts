@@ -1,14 +1,21 @@
 import { Component } from '@angular/core';
 import { IProduct } from '../iproduct.interface';
 import { CartService } from '../cart.service';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cart',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './cart.html',
   styleUrl: './cart.css',
 })
 export class Cart {
+  formSubmitted: boolean = false;
+  userform = new FormGroup({
+    firstName: new FormControl('', Validators.required),
+    lastName: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+  });
   cartItems: IProduct[] = [];
   total: number = 0;
   constructor(private cartService: CartService) {
