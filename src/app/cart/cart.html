@@ -27,6 +27,17 @@
     <div class="text-end">
       <h4>Total: € {{ total }}</h4>
     </div>
+
+    <div class="text-end">
+      <p>Service: € {{ service }}</p>
+    </div>
+
+    <div class="text-end">
+      <p>Discount: € -{{ discountInfo.discount }}</p>
+    </div>
+    <div class="text-end">
+      <h4>New Price: € {{ discountInfo.finalTotal }}</h4>
+    </div>
     <div class="container mt-4">
       <h3>Order form</h3>
       <p>Please fill up your information for delivery</p>

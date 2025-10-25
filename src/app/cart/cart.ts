@@ -18,9 +18,14 @@ export class Cart {
   });
   cartItems: IProduct[] = [];
   total: number = 0;
+  service: number = 0;
+  discountInfo: any;
+
   constructor(private cartService: CartService) {
     this.loadCart();
     this.showTotal();
+    this.service = this.cartService.calculateService(this.total);
+    this.discountInfo = this.cartService.calculateDiscount(this.total);
   }
 
   loadCart(): void {

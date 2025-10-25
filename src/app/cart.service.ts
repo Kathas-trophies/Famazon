@@ -27,4 +27,18 @@ export class CartService {
     }
     return total;
   }
+
+  calculateService(subtotal: number) {
+    return subtotal * 0.1;
+  }
+
+  calculateDiscount(totalBeforeDiscount: number) {
+    let discount = totalBeforeDiscount > 40 ? totalBeforeDiscount * 0.15 : 0;
+
+    return {
+      totalBeforeDiscount,
+      discount,
+      finalTotal: totalBeforeDiscount - discount,
+    };
+  }
 }
